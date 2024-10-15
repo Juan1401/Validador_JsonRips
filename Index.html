@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Validación de RIPS JSON</title>
+  </head>
+  
+  <body>
+    <script src="JS/cargarJson.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/sumarValoresMedicamentos.js"></script>
+    <script src="JS/sumarValoresOtros.js"></script>
+    <script src="JS/sumarCantidadMedicamentos.js"></script>
+    <script src="JS/sumarValoresConsultas.js"></script>
+    <script src="JS/sumarValoresProcedimientos.js"></script>
+
+    <div class="container">
+      <div class="text-center">
+        <div class="col-md-12">
+          <h2>Validaciones para RIPS JSON</h2>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <div class="form-group">
+                  <h2>Carga el archivo.json</h2>
+                  <label for="fileInput">Selecciona un archivo:</label>
+                  <input type="file" class="form-control" id="fileInput">
+              </div>
+              <button class="btn btn-primary" onclick="cargarArchivo()">Cargar</button>
+          </div>
+      </div>
+  </div>
+
+    <hr />
+
+    <!-- Contenedor de las tarjetas -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Valor de servicio de Consultas</h5>
+              <p class="card-text">
+                Suma total de los valores de servicio de las consultas en el
+                JSON
+              </p>
+              <button class="btn btn-primary" onclick="sumarValoresConsulta()">
+                Calcular Suma
+              </button>
+              <p id="resultadoC">Resultado:</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Valor de servicio de Procedimientos</h5>
+              <p class="card-text">
+                Suma total de los valores de servicio de los Procedimientos en el
+                JSON
+              </p>
+              <button class="btn btn-primary" onclick="sumarValoresQX()">
+                Calcular Suma
+              </button>
+              <p id="resultadoQX">Resultado:</p>
+            </div>
+          </div>
+        </div>
+  
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Valor de servicio de Medicamentos</h5>
+              <p class="card-text">
+                Suma total de los valores de servicio de los medicamentos en el
+                JSON
+              </p>
+              <button class="btn btn-primary" onclick="sumarValores()">
+                Calcular Suma
+              </button>
+              <p id="resultado">Resultado:</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Valor de servicio de Otros Servicios</h5>
+              <p class="card-text">
+                Suma total de los valores de servicio del objeto Otros Servicios
+                en el JSON
+              </p>
+              <button class="btn btn-primary" onclick="sumarValoresOtros()">
+                Calcular Suma
+              </button>
+              <p id="resultado2">Resultado:</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Cantidad de Medicamentos en el JSON</h5>
+              <p class="card-text">
+                Cantidad de medicamentos en JSON de acuerdo al código CUM
+              </p>
+              <input
+                type="text"
+                id="codMedicamento"
+                placeholder="Ingrese el código CUM"
+              />
+              <br /><br />
+              <button
+                class="btn btn-primary"
+                onclick="sumarValoresMedicamentos(document.getElementById('codMedicamento').value)">
+                Calcular Suma
+              </button>
+              <p id="resultado3">Resultado:</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Valor Total de los Servicios</h5>
+              <p class="card-text">
+                Suma total de los valores de servicio del objeto Otros Servicios
+                en el JSON
+              </p>
+              <button class="btn btn-primary" onclick="sumarValoresOtros()">
+                Calcular Suma
+              </button>
+              <p id="resultado2">Resultado:</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
