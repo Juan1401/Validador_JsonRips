@@ -9,8 +9,12 @@ function cargarArchivo() {
         const reader = new FileReader();
         reader.onload = function(e) {
             archivoJson = JSON.parse(e.target.result);
-            console.log(archivoJson); // Muestra el contenido del archivo cargado en la consola
+            console.log(archivoJson);
             alert('Archivo cargado correctamente');
+            sumarValoresConsulta();
+            sumarValoresQX();
+            sumarValores(); //medicamentos
+            sumarValoresOtros();
         };
         reader.readAsText(file);
     } else {

@@ -1,3 +1,7 @@
+/**
+ * !Sumatorio de consulta
+ *  Función para sumatoria del total por concepto de consultas.
+ */
 function sumarValoresConsulta() {
     if (!archivoJson) {
         alert("Por favor, carga un archivo JSON primero.");
