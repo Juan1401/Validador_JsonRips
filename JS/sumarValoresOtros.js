@@ -21,5 +21,6 @@ function sumarValoresOtros() {
     }
 
     document.getElementById("resultado2").innerText = "Resultado: " + totalVrServicio;
+    return totalVrServicio;
 }
 

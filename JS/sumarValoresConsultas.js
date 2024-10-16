@@ -25,4 +25,5 @@ function sumarValoresConsulta() {
     }
 
     document.getElementById("resultadoC").innerText = "Resultado: " + totalVrServicio;
+    return totalVrServicio;
 }

@@ -15,6 +15,7 @@ function cargarArchivo() {
             sumarValoresQX();
             sumarValores(); //medicamentos
             sumarValoresOtros();
+            valoresTotales();
         };
         reader.readAsText(file);
     } else {

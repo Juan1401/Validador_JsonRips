@@ -22,4 +22,5 @@ function sumarValores() {
 
     document.getElementById("resultado").innerText =
         "Resultado: " + totalVrServicio;
+    return totalVrServicio;
 }

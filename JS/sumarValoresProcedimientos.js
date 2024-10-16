@@ -22,4 +22,6 @@ function sumarValoresQX() {
 
     document.getElementById("resultadoQX").innerText =
         "Resultado: " + totalVrServicio;
+
+    return totalVrServicio;
 }
